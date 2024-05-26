@@ -69,9 +69,9 @@
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(playerMsg);
             panel1.Controls.Add(playerName);
-            panel1.Location = new Point(-13, 3);
+            panel1.Location = new Point(-13, -22);
             panel1.Name = "panel1";
-            panel1.Size = new Size(924, 210);
+            panel1.Size = new Size(924, 235);
             panel1.TabIndex = 24;
             // 
             // playerMsg
@@ -80,7 +80,7 @@
             playerMsg.BackColor = Color.Transparent;
             playerMsg.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             playerMsg.ForeColor = Color.White;
-            playerMsg.Location = new Point(64, 89);
+            playerMsg.Location = new Point(73, 119);
             playerMsg.Name = "playerMsg";
             playerMsg.Size = new Size(88, 28);
             playerMsg.TabIndex = 1;
@@ -93,7 +93,7 @@
             playerName.BackColor = Color.Transparent;
             playerName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             playerName.ForeColor = Color.White;
-            playerName.Location = new Point(64, 61);
+            playerName.Location = new Point(73, 91);
             playerName.Name = "playerName";
             playerName.Size = new Size(65, 28);
             playerName.TabIndex = 0;

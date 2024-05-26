@@ -46,18 +46,12 @@ namespace InsideHouse
             if (popUpPanel.Visible && e.KeyCode == Keys.Enter && !dialogueFormOpen)
             {
                 dialogueFormOpen = true;
-                // Close the current form and show the next form
-                ShowDialogueSection();
+                PA_Dialogue_Section_1 dialogueSection = new PA_Dialogue_Section_1();
+                this.Hide();
+                dialogueSection.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
+                dialogueSection.Show();
+                this.Close();
             }
-        }
-
-        private void ShowDialogueSection()
-        {
-            PA_Dialogue_Section_1 dialogueSection = new PA_Dialogue_Section_1();
-            dialogueSection.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
-            dialogueSection.Show();
-            this.Hide();
-            this.Close();
         }
 
         private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
