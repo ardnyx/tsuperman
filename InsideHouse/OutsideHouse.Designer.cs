@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(856, 518);
             Name = "OutsideHouse";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "OutsideHouse";
             ResumeLayout(false);
         }

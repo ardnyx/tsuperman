@@ -126,6 +126,7 @@
             Controls.Add(wall_2);
             Controls.Add(wall_4);
             Name = "LeavingTheHouse";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LeavingTheHouse";
             KeyDown += keyIsDown;
             KeyUp += keyIsUp;
