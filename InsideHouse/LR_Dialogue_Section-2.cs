@@ -40,6 +40,13 @@ namespace InsideHouse
             {
                 playerMsgText = "It's a symbol of our heritage!";
             }
+            else if (dialogueCounter == 2)
+            {
+                LivingRoom_Part3 livingRoom_Part3 = new LivingRoom_Part3();
+                livingRoom_Part3.Show();
+                this.Hide();
+                dialogueCounter = -1;
+            }
 
             if (msgIndex < playerMsgText.Length)
             {
@@ -63,6 +70,36 @@ namespace InsideHouse
             animationTimer.Interval = 100; // Adjust the speed of the text animation
             animationTimer.Tick += new EventHandler(AnimateText);
             animationTimer.Start();
+
+            animationTimer.Tick += new EventHandler((s, args) =>
+            {
+                if (!animationTimer.Enabled)
+                {
+                    this.MouseClick -= OneClick; // Remove the MouseClick_Part1 event handler
+                    this.MouseClick += SecondClick; // Add the MouseClick_Part2 event handler
+                }
+            });
+        }
+
+        private void SecondClick(object sender, MouseEventArgs e)
+        {
+            dialogueCounter++;
+            playerName.Text = string.Empty;
+
+            // Start animation for the father's dialogue
+            msgIndex = 0;
+            animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = 100; // Adjust the speed of the text animation
+            animationTimer.Tick += new EventHandler(AnimateText);
+            animationTimer.Start();
+
+            animationTimer.Tick += new EventHandler((s, args) =>
+            {
+                if (!animationTimer.Enabled)
+                {
+                    this.MouseClick -= SecondClick; // Remove the MouseClick_Part1 event handler
+                }
+            });
         }
 
         private void LR_Dialogue_Section_2_MouseClick(object sender, MouseEventArgs e)
