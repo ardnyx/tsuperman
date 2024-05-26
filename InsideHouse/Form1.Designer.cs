@@ -84,7 +84,7 @@
             // protagonist
             // 
             protagonist.Image = Properties.Resources._51;
-            protagonist.Location = new Point(215, 190);
+            protagonist.Location = new Point(774, 206);
             protagonist.Name = "protagonist";
             protagonist.Size = new Size(74, 130);
             protagonist.SizeMode = PictureBoxSizeMode.StretchImage;

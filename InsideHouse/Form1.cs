@@ -35,7 +35,7 @@ namespace InsideHouse
         }
 
         // kailangan mo to isetup sa Event Handlers sa form, click mo ung form, tas sa gilid ng properties may parang lightning bolt don, tas hanapin mo yung keyDown, pinangalanan kong keyIsDown
-        private void keyIsDown(object sender, KeyEventArgs e) 
+        private void keyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
