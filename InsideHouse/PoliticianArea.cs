@@ -42,8 +42,20 @@ namespace InsideHouse
                 goRight = true;
             }
 
+            if (popUpPanel.Visible && e.KeyCode == Keys.Enter)
+            {
+                ShowDialogueSection();
+            }
+
         }
 
+        private void ShowDialogueSection()
+        {
+            PA_Dialogue_Section_1 pA_Dialogue_Section_1 = new PA_Dialogue_Section_1();
+            pA_Dialogue_Section_1.Show();
+            this.Hide();
+            this.Close();
+        }
         // did the same thing here
         private void keyIsUp(object sender, KeyEventArgs e)
         {
