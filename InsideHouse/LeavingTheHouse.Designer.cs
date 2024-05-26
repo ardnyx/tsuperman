@@ -33,17 +33,20 @@
             wall_3 = new PictureBox();
             wall_2 = new PictureBox();
             wall_4 = new PictureBox();
+            popUpPanel = new Panel();
+            label = new Label();
             ((System.ComponentModel.ISupportInitialize)protagonist).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wall_1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wall_3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wall_2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wall_4).BeginInit();
+            popUpPanel.SuspendLayout();
             SuspendLayout();
             // 
             // protagonist
             // 
             protagonist.Image = Properties.Resources._51;
-            protagonist.Location = new Point(770, 190);
+            protagonist.Location = new Point(770, 201);
             protagonist.Name = "protagonist";
             protagonist.Size = new Size(74, 130);
             protagonist.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -91,11 +94,32 @@
             wall_4.TabStop = false;
             wall_4.Tag = "Wall";
             // 
+            // popUpPanel
+            // 
+            popUpPanel.BackColor = Color.Gray;
+            popUpPanel.Controls.Add(label);
+            popUpPanel.Location = new Point(302, 407);
+            popUpPanel.Name = "popUpPanel";
+            popUpPanel.Size = new Size(256, 38);
+            popUpPanel.TabIndex = 20;
+            // 
+            // label
+            // 
+            label.AutoSize = true;
+            label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label.ForeColor = Color.White;
+            label.Location = new Point(62, 8);
+            label.Name = "label";
+            label.Size = new Size(131, 21);
+            label.TabIndex = 0;
+            label.Text = "Leave the House?";
+            // 
             // LeavingTheHouse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(856, 518);
+            Controls.Add(popUpPanel);
             Controls.Add(protagonist);
             Controls.Add(wall_1);
             Controls.Add(wall_3);
@@ -103,11 +127,15 @@
             Controls.Add(wall_4);
             Name = "LeavingTheHouse";
             Text = "LeavingTheHouse";
+            KeyDown += keyIsDown;
+            KeyUp += keyIsUp;
             ((System.ComponentModel.ISupportInitialize)protagonist).EndInit();
             ((System.ComponentModel.ISupportInitialize)wall_1).EndInit();
             ((System.ComponentModel.ISupportInitialize)wall_3).EndInit();
             ((System.ComponentModel.ISupportInitialize)wall_2).EndInit();
             ((System.ComponentModel.ISupportInitialize)wall_4).EndInit();
+            popUpPanel.ResumeLayout(false);
+            popUpPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -118,5 +146,7 @@
         private PictureBox wall_3;
         private PictureBox wall_2;
         private PictureBox wall_4;
+        private Panel popUpPanel;
+        private Label label;
     }
 }
