@@ -42,6 +42,7 @@ namespace InsideHouse
             {
                 goRight = true;
             }
+
         }
 
         // did the same thing here
@@ -73,6 +74,19 @@ namespace InsideHouse
             {
                 protagonist.Left += speed;
             }
+
+            if (protagonist.Left <= 0)
+            {
+                TalkToPoliticianArea();
+            }
+        }
+
+        private void TalkToPoliticianArea()
+        {
+            PoliticianArea politicianArea = new PoliticianArea();
+            politicianArea.Show();
+            this.Hide();
+            this.Close();
         }
     }
 }
