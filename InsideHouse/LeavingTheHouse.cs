@@ -16,6 +16,7 @@ namespace InsideHouse
         int speed = 5; // Speed of the player
         List<PictureBox> walls = new List<PictureBox>(); // For Wall Detector
         System.Windows.Forms.Timer moveTimer; // dont know what is this for basta sabi ni chatgpt
+        bool dialogueFormOpen = false;
 
         public LeavingTheHouse()
         {
@@ -57,8 +58,26 @@ namespace InsideHouse
             {
                 goRight = true;
             }
+
+            if (popUpPanel.Visible && e.KeyCode == Keys.Enter && !dialogueFormOpen)
+            {
+                ShowDialogueSection();
+            }
         }
 
+        private void ShowDialogueSection()
+        {
+            dialogueFormOpen = true;
+            LR_Dialogue_Section_3 dialogueSection = new LR_Dialogue_Section_3();
+            dialogueSection.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
+            dialogueSection.Show();
+            this.Hide();
+            this.Close();
+        }
+        private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dialogueFormOpen = false;
+        }
         private void keyIsUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
