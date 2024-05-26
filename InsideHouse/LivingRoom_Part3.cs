@@ -109,16 +109,15 @@ namespace InsideHouse
             if (goLeft && protagonist.Left > 0 && !IsCollision(new Point(protagonist.Left - speed, protagonist.Top)))
             {
                 protagonist.Left -= speed;
-
-                // Check if the protagonist has reached the leftmost edge
-                if (protagonist.Left >= this.ClientSize.Width)
-                {
-                    ShowLeavingTheHouse();
-                }
             }
             if (goRight && protagonist.Right < this.ClientSize.Width && !IsCollision(new Point(protagonist.Left + speed, protagonist.Top)))
             {
                 protagonist.Left += speed;
+            }
+
+            if (protagonist.Left <= 0)
+            {
+                ShowLeavingTheHouse();
             }
         }
 
@@ -128,7 +127,8 @@ namespace InsideHouse
             moveTimer.Stop();
 
             // Create and show the LeavingTheHouse form
-            
+            LeavingTheHouse leavingTheHouse = new LeavingTheHouse();
+            leavingTheHouse.Show();
 
             // Optionally hide or close the current form
             this.Hide();
