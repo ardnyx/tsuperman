@@ -153,9 +153,39 @@ namespace InsideHouse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap city_background {
+            get {
+                object obj = ResourceManager.GetObject("city background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap local_politician {
+            get {
+                object obj = ResourceManager.GetObject("local politician", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newspaper {
             get {
                 object obj = ResourceManager.GetObject("newspaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap protagonist_house {
+            get {
+                object obj = ResourceManager.GetObject("protagonist house", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
