@@ -30,8 +30,11 @@
         {
             protagonist = new PictureBox();
             pictureBox1 = new PictureBox();
+            popUpPanel = new Panel();
+            label = new Label();
             ((System.ComponentModel.ISupportInitialize)protagonist).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            popUpPanel.SuspendLayout();
             SuspendLayout();
             // 
             // protagonist
@@ -58,6 +61,27 @@
             pictureBox1.TabStop = false;
             pictureBox1.Tag = "child";
             // 
+            // popUpPanel
+            // 
+            popUpPanel.BackColor = Color.Gray;
+            popUpPanel.Controls.Add(label);
+            popUpPanel.Location = new Point(292, 468);
+            popUpPanel.Name = "popUpPanel";
+            popUpPanel.Size = new Size(256, 38);
+            popUpPanel.TabIndex = 20;
+            popUpPanel.Visible = false;
+            // 
+            // label
+            // 
+            label.AutoSize = true;
+            label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label.ForeColor = Color.White;
+            label.Location = new Point(22, 8);
+            label.Name = "label";
+            label.Size = new Size(209, 21);
+            label.TabIndex = 0;
+            label.Text = "Press 'Enter' to talk to Mayor";
+            // 
             // PoliticianArea
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -65,6 +89,7 @@
             BackgroundImage = Properties.Resources.city_background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(856, 518);
+            Controls.Add(popUpPanel);
             Controls.Add(pictureBox1);
             Controls.Add(protagonist);
             DoubleBuffered = true;
@@ -74,6 +99,8 @@
             KeyUp += keyIsUp;
             ((System.ComponentModel.ISupportInitialize)protagonist).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            popUpPanel.ResumeLayout(false);
+            popUpPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -81,5 +108,7 @@
 
         private PictureBox protagonist;
         private PictureBox pictureBox1;
+        private Panel popUpPanel;
+        private Label label;
     }
 }

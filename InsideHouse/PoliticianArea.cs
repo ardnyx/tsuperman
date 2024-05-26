@@ -74,9 +74,32 @@ namespace InsideHouse
                 protagonist.Left += speed;
             }
 
-            if (protagonist.Left <= 0)
+            CheckInteraction();
+        }
+        private void ShowInteractionPopup()
+        {
+            // Show the pop-up panel
+            popUpPanel.Visible = true;
+        }
+
+        private void HideInteractionPopup()
+        {
+            // Hide the pop-up panel
+            popUpPanel.Visible = false;
+        }
+        private void CheckInteraction()
+        {
+            // Define the specific point for interaction
+            Point interactionPoint = new Point(628, 346);
+
+            // Check if the protagonist is at the interaction point
+            if (protagonist.Bounds.Contains(interactionPoint))
             {
-                TalkToPoliticianArea();
+                ShowInteractionPopup();
+            }
+            else
+            {
+                HideInteractionPopup();
             }
         }
     }
