@@ -45,14 +45,14 @@ namespace InsideHouse
 
             if (popUpPanel.Visible && e.KeyCode == Keys.Enter && !dialogueFormOpen)
             {
+                dialogueFormOpen = true;
+                // Close the current form and show the next form
                 ShowDialogueSection();
             }
-
         }
 
         private void ShowDialogueSection()
         {
-            dialogueFormOpen = true;
             PA_Dialogue_Section_1 dialogueSection = new PA_Dialogue_Section_1();
             dialogueSection.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
             dialogueSection.Show();
@@ -64,6 +64,7 @@ namespace InsideHouse
         {
             dialogueFormOpen = false;
         }
+
         // did the same thing here
         private void keyIsUp(object sender, KeyEventArgs e)
         {
@@ -96,6 +97,7 @@ namespace InsideHouse
 
             CheckInteraction();
         }
+
         private void ShowInteractionPopup()
         {
             // Show the pop-up panel
@@ -107,6 +109,7 @@ namespace InsideHouse
             // Hide the pop-up panel
             popUpPanel.Visible = false;
         }
+
         private void CheckInteraction()
         {
             // Define the specific point for interaction

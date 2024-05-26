@@ -28,28 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            wall_2 = new PictureBox();
             politician = new PictureBox();
             protagonist = new PictureBox();
-            pictureBox4 = new PictureBox();
+            panel1 = new Panel();
             playerMsg = new Label();
             playerName = new Label();
-            ((System.ComponentModel.ISupportInitialize)wall_2).BeginInit();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)politician).BeginInit();
             ((System.ComponentModel.ISupportInitialize)protagonist).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // wall_2
-            // 
-            wall_2.BackColor = Color.Black;
-            wall_2.BorderStyle = BorderStyle.Fixed3D;
-            wall_2.Location = new Point(-13, -14);
-            wall_2.Name = "wall_2";
-            wall_2.Size = new Size(882, 233);
-            wall_2.TabIndex = 8;
-            wall_2.TabStop = false;
-            wall_2.Tag = "Wall";
             // 
             // politician
             // 
@@ -75,42 +63,51 @@
             protagonist.TabStop = false;
             protagonist.Tag = "child";
             // 
-            // pictureBox4
+            // panel1
             // 
-            pictureBox4.BackColor = Color.Black;
-            pictureBox4.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox4.Location = new Point(-13, 446);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(882, 78);
-            pictureBox4.TabIndex = 18;
-            pictureBox4.TabStop = false;
-            pictureBox4.Tag = "Wall";
+            panel1.BackColor = Color.Black;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(playerMsg);
+            panel1.Controls.Add(playerName);
+            panel1.Location = new Point(-13, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(924, 210);
+            panel1.TabIndex = 24;
             // 
             // playerMsg
             // 
             playerMsg.AutoSize = true;
-            playerMsg.BackColor = Color.Black;
+            playerMsg.BackColor = Color.Transparent;
             playerMsg.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             playerMsg.ForeColor = Color.White;
-            playerMsg.Location = new Point(46, 102);
+            playerMsg.Location = new Point(64, 89);
             playerMsg.Name = "playerMsg";
             playerMsg.Size = new Size(88, 28);
-            playerMsg.TabIndex = 20;
+            playerMsg.TabIndex = 1;
             playerMsg.Tag = "";
             playerMsg.Text = "Message";
             // 
             // playerName
             // 
             playerName.AutoSize = true;
-            playerName.BackColor = Color.Black;
+            playerName.BackColor = Color.Transparent;
             playerName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             playerName.ForeColor = Color.White;
-            playerName.Location = new Point(46, 74);
+            playerName.Location = new Point(64, 61);
             playerName.Name = "playerName";
             playerName.Size = new Size(65, 28);
-            playerName.TabIndex = 19;
+            playerName.TabIndex = 0;
             playerName.Tag = "";
             playerName.Text = "Player";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Black;
+            panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Location = new Point(-13, 447);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(877, 85);
+            panel2.TabIndex = 25;
             // 
             // PA_Dialogue_Section_1
             // 
@@ -119,32 +116,28 @@
             BackgroundImage = Properties.Resources.city_background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(856, 518);
-            Controls.Add(playerMsg);
-            Controls.Add(playerName);
-            Controls.Add(pictureBox4);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(protagonist);
             Controls.Add(politician);
-            Controls.Add(wall_2);
             DoubleBuffered = true;
             Name = "PA_Dialogue_Section_1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PA_Dialogue_Section_1";
             Load += PA_Dialogue_Section_1_Load;
-            ((System.ComponentModel.ISupportInitialize)wall_2).EndInit();
             ((System.ComponentModel.ISupportInitialize)politician).EndInit();
             ((System.ComponentModel.ISupportInitialize)protagonist).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private PictureBox wall_2;
         private PictureBox politician;
         private PictureBox protagonist;
-        private PictureBox pictureBox4;
+        private Panel panel1;
         private Label playerMsg;
         private Label playerName;
+        private Panel panel2;
     }
 }

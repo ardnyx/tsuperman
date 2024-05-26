@@ -16,14 +16,13 @@ namespace InsideHouse
         private int msgIndex = 0;
         private string playerMsgText = "Good day Ms. Mayor, Can I speak with you for a moment?";
         private System.Windows.Forms.Timer animationTimer;
+
         public PA_Dialogue_Section_1()
         {
             InitializeComponent();
             this.Load += new EventHandler(PA_Dialogue_Section_1_Load);
             this.MouseClick += new MouseEventHandler(MouseClick_Part1);
         }
-
-
 
         private void protagonist_Click(object sender, EventArgs e)
         {
@@ -39,6 +38,11 @@ namespace InsideHouse
             animationTimer.Interval = 100; // Adjust the speed of the text animation
             animationTimer.Tick += new EventHandler(AnimateText);
             animationTimer.Start();
+
+            // Ensure text wraps when dialogue exceeds form size
+            playerMsg.AutoSize = false;
+            playerMsg.Width = this.ClientSize.Width - playerMsg.Location.X * 2; // Adjust X position for padding
+            playerMsg.Height = this.ClientSize.Height - playerMsg.Location.Y * 2; // Adjust Y position for padding
         }
 
         private void AnimateText(object sender, EventArgs e)
@@ -83,6 +87,7 @@ namespace InsideHouse
             {
                 // next form
             }
+
             if (msgIndex < playerMsgText.Length)
             {
                 playerMsg.Text += playerMsgText[msgIndex];

@@ -76,7 +76,7 @@ namespace InsideHouse
                 protagonist.Left += speed;
             }
 
-            else if (protagonist.Right >= this.ClientSize.Width)
+            if (protagonist.Right >= this.ClientSize.Width && !dialogueFormOpen)
             {
                 TalkToPoliticianArea();
             }
@@ -84,15 +84,12 @@ namespace InsideHouse
 
         private void TalkToPoliticianArea()
         {
-            if (!dialogueFormOpen)
-            {
-                dialogueFormOpen = true;
-                PoliticianArea politicianArea = new PoliticianArea();
-                politicianArea.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
-                politicianArea.Show();
-                this.Hide();
-                this.Close();
-            }
+            dialogueFormOpen = true;
+            PoliticianArea politicianArea = new PoliticianArea();
+            politicianArea.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
+            politicianArea.Show();
+            this.Hide();
+            // Do not call this.Close() to keep the form instance alive, as the protagonist might return to it
         }
 
         private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
