@@ -47,16 +47,16 @@ namespace InsideHouse
             {
                 dialogueFormOpen = true;
                 PA_Dialogue_Section_1 dialogueSection = new PA_Dialogue_Section_1();
-                this.Hide();
                 dialogueSection.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
                 dialogueSection.Show();
-                this.Close();
+                this.Hide();
             }
         }
 
         private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
         {
             dialogueFormOpen = false;
+            this.Close(); // Close the PoliticianArea form when the dialogue form is closed
         }
 
         // did the same thing here

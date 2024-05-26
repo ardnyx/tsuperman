@@ -78,23 +78,18 @@ namespace InsideHouse
 
             if (protagonist.Right >= this.ClientSize.Width && !dialogueFormOpen)
             {
-                TalkToPoliticianArea();
+                dialogueFormOpen = true;
+                PoliticianArea politicianArea = new PoliticianArea();
+                politicianArea.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
+                politicianArea.Show();
+                this.Hide();
             }
-        }
-
-        private void TalkToPoliticianArea()
-        {
-            dialogueFormOpen = true;
-            PoliticianArea politicianArea = new PoliticianArea();
-            politicianArea.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
-            politicianArea.Show();
-            this.Hide();
-            // Do not call this.Close() to keep the form instance alive, as the protagonist might return to it
         }
 
         private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
         {
             dialogueFormOpen = false;
+            this.Show(); // Show the OutsideHouse form again when the PoliticianArea form is closed
         }
     }
 }
