@@ -127,6 +127,7 @@
             Controls.Add(wall_2);
             DoubleBuffered = true;
             Name = "PA_Dialogue_Section_1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PA_Dialogue_Section_1";
             Load += PA_Dialogue_Section_1_Load;
             ((System.ComponentModel.ISupportInitialize)wall_2).EndInit();

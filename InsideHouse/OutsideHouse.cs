@@ -12,6 +12,7 @@ namespace InsideHouse
 {
     public partial class OutsideHouse : Form
     {
+        bool dialogueFormOpen = false;
         bool goLeft, goRight;
         int speed = 5; // Speed of the player
         System.Windows.Forms.Timer moveTimer; // dont know what is this for basta sabi ni chatgpt
@@ -75,7 +76,7 @@ namespace InsideHouse
                 protagonist.Left += speed;
             }
 
-            if (protagonist.Left <= 0)
+            else if (protagonist.Right >= this.ClientSize.Width)
             {
                 TalkToPoliticianArea();
             }
@@ -83,10 +84,20 @@ namespace InsideHouse
 
         private void TalkToPoliticianArea()
         {
-            PoliticianArea politicianArea = new PoliticianArea();
-            politicianArea.Show();
-            this.Hide();
-            this.Close();
+            if (!dialogueFormOpen)
+            {
+                dialogueFormOpen = true;
+                PoliticianArea politicianArea = new PoliticianArea();
+                politicianArea.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
+                politicianArea.Show();
+                this.Hide();
+                this.Close();
+            }
+        }
+
+        private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dialogueFormOpen = false;
         }
     }
 }

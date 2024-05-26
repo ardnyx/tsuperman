@@ -94,6 +94,7 @@
             Controls.Add(protagonist);
             DoubleBuffered = true;
             Name = "PoliticianArea";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PoliticianArea";
             KeyDown += keyIsDown;
             KeyUp += keyIsUp;
