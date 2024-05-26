@@ -12,6 +12,7 @@ namespace InsideHouse
 {
     public partial class PoliticianArea : Form
     {
+        bool dialogueFormOpen = false;
         bool goLeft, goRight;
         int speed = 5; // Speed of the player
         System.Windows.Forms.Timer moveTimer; // dont know what is this for basta sabi ni chatgpt
@@ -42,7 +43,7 @@ namespace InsideHouse
                 goRight = true;
             }
 
-            if (popUpPanel.Visible && e.KeyCode == Keys.Enter)
+            if (popUpPanel.Visible && e.KeyCode == Keys.Enter && !dialogueFormOpen)
             {
                 ShowDialogueSection();
             }
@@ -51,10 +52,17 @@ namespace InsideHouse
 
         private void ShowDialogueSection()
         {
-            PA_Dialogue_Section_1 pA_Dialogue_Section_1 = new PA_Dialogue_Section_1();
-            pA_Dialogue_Section_1.Show();
+            dialogueFormOpen = true;
+            PA_Dialogue_Section_1 dialogueSection = new PA_Dialogue_Section_1();
+            dialogueSection.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
+            dialogueSection.Show();
             this.Hide();
             this.Close();
+        }
+
+        private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dialogueFormOpen = false;
         }
         // did the same thing here
         private void keyIsUp(object sender, KeyEventArgs e)
