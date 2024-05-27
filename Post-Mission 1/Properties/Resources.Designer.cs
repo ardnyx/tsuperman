@@ -63,6 +63,16 @@ namespace Post_Mission_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barangay_background {
+            get {
+                object obj = ResourceManager.GetObject("barangay_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_1 {
             get {
                 object obj = ResourceManager.GetObject("bg-1", resourceCulture);
@@ -143,6 +153,16 @@ namespace Post_Mission_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap government_talking {
+            get {
+                object obj = ResourceManager.GetObject("government_talking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap local_politician {
             get {
                 object obj = ResourceManager.GetObject("local politician", resourceCulture);
@@ -176,6 +196,36 @@ namespace Post_Mission_1.Properties {
         internal static System.Drawing.Bitmap protagonist_house {
             get {
                 object obj = ResourceManager.GetObject("protagonist house", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rally_bg1 {
+            get {
+                object obj = ResourceManager.GetObject("rally_bg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rally_bg2 {
+            get {
+                object obj = ResourceManager.GetObject("rally_bg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap savethejeepneys {
+            get {
+                object obj = ResourceManager.GetObject("savethejeepneys", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
