@@ -13,6 +13,7 @@ namespace Post_Mission_1
     public partial class PM1_LivingRoom : Form
     {
         bool goUp, goDown, goLeft, goRight;
+        bool nextFormOpen = false;
         int speed = 5;
         List<PictureBox> walls = new List<PictureBox>();
         System.Windows.Forms.Timer moveTimer;
@@ -68,10 +69,13 @@ namespace Post_Mission_1
 
         private void MoveProtagonist()
         {
-            if (protagonist.Left <= 0)
+            if (protagonist.Left <= 0 && !nextFormOpen)
             {
-                // show new form
-                return; // Exit the method to avoid further processing
+                nextFormOpen = true;
+                PM1_LeavingTheHouse pM1_LeavingTheHouse = new PM1_LeavingTheHouse();
+                pM1_LeavingTheHouse.Show();
+                this.Hide();
+                this.Close();
             }
             if (goUp && protagonist.Top > 0 && !IsCollision(new Point(protagonist.Left, protagonist.Top - speed)))
             {
