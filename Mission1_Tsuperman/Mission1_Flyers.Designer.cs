@@ -186,6 +186,7 @@
             Controls.Add(btnRestart);
             Controls.Add(txtScore);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Mission1_Flyers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mision1_Flyers";

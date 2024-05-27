@@ -44,9 +44,10 @@
             StartBtn.FlatAppearance.MouseOverBackColor = Color.Silver;
             StartBtn.FlatStyle = FlatStyle.Flat;
             StartBtn.Image = (Image)resources.GetObject("StartBtn.Image");
-            StartBtn.Location = new Point(657, 458);
+            StartBtn.Location = new Point(575, 344);
+            StartBtn.Margin = new Padding(3, 2, 3, 2);
             StartBtn.Name = "StartBtn";
-            StartBtn.Size = new Size(238, 67);
+            StartBtn.Size = new Size(208, 50);
             StartBtn.TabIndex = 1;
             StartBtn.UseVisualStyleBackColor = false;
             StartBtn.Click += button1_Click;
@@ -59,9 +60,10 @@
             QuitBtn.FlatAppearance.MouseOverBackColor = Color.RosyBrown;
             QuitBtn.FlatStyle = FlatStyle.Flat;
             QuitBtn.Image = Properties.Resources.Untitled_design__8__removebg_preview;
-            QuitBtn.Location = new Point(668, 519);
+            QuitBtn.Location = new Point(584, 389);
+            QuitBtn.Margin = new Padding(3, 2, 3, 2);
             QuitBtn.Name = "QuitBtn";
-            QuitBtn.Size = new Size(222, 60);
+            QuitBtn.Size = new Size(194, 45);
             QuitBtn.TabIndex = 2;
             QuitBtn.UseVisualStyleBackColor = false;
             // 
@@ -72,17 +74,20 @@
             Form1Pnl.Controls.Add(StartBtn);
             Form1Pnl.Controls.Add(QuitBtn);
             Form1Pnl.Location = new Point(0, 0);
+            Form1Pnl.Margin = new Padding(3, 2, 3, 2);
             Form1Pnl.Name = "Form1Pnl";
-            Form1Pnl.Size = new Size(1531, 785);
+            Form1Pnl.Size = new Size(1340, 589);
             Form1Pnl.TabIndex = 3;
             Form1Pnl.Paint += Form1Pnl_Paint;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1531, 780);
+            ClientSize = new Size(1340, 585);
             Controls.Add(Form1Pnl);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

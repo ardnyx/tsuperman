@@ -51,12 +51,12 @@ namespace TsuperMan
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-            // Handle progress bar click event if needed
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            // Handle label click event if needed
+            
         }
     }
 }

@@ -96,6 +96,7 @@
             Controls.Add(wall_3);
             Controls.Add(wall_2);
             Controls.Add(wall_1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PM1_EnteringTheHouse";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PM1_EnteringTheHouse";

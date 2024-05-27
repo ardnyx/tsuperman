@@ -298,6 +298,7 @@
             Controls.Add(wall_1);
             Controls.Add(wall_2);
             Controls.Add(wall_8);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LivingRoom_Part2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LivingRoom_Part2";

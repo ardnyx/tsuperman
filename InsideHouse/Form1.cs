@@ -11,7 +11,7 @@ namespace InsideHouse
         bool goUp, goDown, goLeft, goRight; // movements
         int speed = 5; // Speed of the player
         List<PictureBox> walls = new List<PictureBox>(); // For Wall Detector
-        System.Windows.Forms.Timer moveTimer; // dont know what is this for basta sabi ni chatgpt
+        System.Windows.Forms.Timer moveTimer;
 
         public Form1()
         {
@@ -109,7 +109,7 @@ namespace InsideHouse
             }
         }
 
-        // chinatgpt ko lang tong collision detector kase ang hirap, basta its a bool for knowing if yung dinefine kong shape for the player hits a collision (wall).
+        // its a bool for knowing if yung dinefine kong shape for the player hits a collision (wall).
         private bool IsCollision(Point newLocation)
         {
             // Define the lower portion of the protagonist for collision detection

@@ -50,6 +50,7 @@
             BackColor = Color.Black;
             ClientSize = new Size(856, 518);
             Controls.Add(playerName);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PM1_NextDayTransition";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PM1_NextDayTransition";

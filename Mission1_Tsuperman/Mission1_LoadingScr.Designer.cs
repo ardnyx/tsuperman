@@ -100,6 +100,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(startLabel);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Mission1_LoadingScr";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mission1_LoadingScr";

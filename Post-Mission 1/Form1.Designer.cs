@@ -341,6 +341,7 @@
             Controls.Add(wall6);
             Controls.Add(wall5);
             Controls.Add(wall3);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

@@ -195,6 +195,7 @@
             Controls.Add(wall_2);
             Controls.Add(wall_8);
             Controls.Add(wall_1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PM1_LivingRoom";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PM1_LivingRoom";

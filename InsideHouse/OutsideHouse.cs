@@ -15,7 +15,7 @@ namespace InsideHouse
         bool dialogueFormOpen = false;
         bool goLeft, goRight;
         int speed = 5; // Speed of the player
-        System.Windows.Forms.Timer moveTimer; // dont know what is this for basta sabi ni chatgpt
+        System.Windows.Forms.Timer moveTimer;
 
         public OutsideHouse()
         {

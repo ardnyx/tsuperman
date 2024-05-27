@@ -93,6 +93,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(protagonist);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PoliticianArea";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PoliticianArea";

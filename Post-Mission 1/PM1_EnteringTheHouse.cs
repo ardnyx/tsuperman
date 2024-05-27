@@ -15,7 +15,7 @@ namespace Post_Mission_1
         bool goUp, goDown, goLeft, goRight; // movements
         int speed = 5; // Speed of the player
         List<PictureBox> walls = new List<PictureBox>(); // For Wall Detector
-        System.Windows.Forms.Timer moveTimer; // dont know what is this for basta sabi ni chatgpt
+        System.Windows.Forms.Timer moveTimer;
         bool nextFormOpen = false;
         public PM1_EnteringTheHouse()
         {

@@ -69,6 +69,7 @@
             Controls.Add(protagonist);
             Controls.Add(protagonist_house);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "OutsideHouse";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "OutsideHouse";

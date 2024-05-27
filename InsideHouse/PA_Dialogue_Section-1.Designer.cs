@@ -121,6 +121,7 @@
             Controls.Add(protagonist);
             Controls.Add(politician);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PA_Dialogue_Section_1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PA_Dialogue_Section_1";

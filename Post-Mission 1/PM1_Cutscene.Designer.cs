@@ -97,6 +97,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PM1_Cutscene";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PM1_Cutscene";

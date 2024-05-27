@@ -165,6 +165,7 @@
             Controls.Add(table);
             Controls.Add(protagonist);
             Controls.Add(father);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LR_Dialogue_Section_1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LR_Dialogue_Section_1";

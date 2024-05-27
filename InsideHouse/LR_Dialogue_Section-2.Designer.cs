@@ -52,6 +52,7 @@
             BackColor = Color.Black;
             ClientSize = new Size(856, 518);
             Controls.Add(playerName);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LR_Dialogue_Section_2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LR_Dialogue_Section_2";

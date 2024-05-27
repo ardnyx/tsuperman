@@ -84,7 +84,7 @@
             // protagonist
             // 
             protagonist.Image = Properties.Resources._51;
-            protagonist.Location = new Point(774, 206);
+            protagonist.Location = new Point(174, 187);
             protagonist.Name = "protagonist";
             protagonist.Size = new Size(74, 130);
             protagonist.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -102,6 +102,7 @@
             Controls.Add(wall_3);
             Controls.Add(wall_2);
             Controls.Add(wall_4);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

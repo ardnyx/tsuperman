@@ -62,6 +62,7 @@
             ClientSize = new Size(811, 518);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Mission1_Win";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Congrats!";
