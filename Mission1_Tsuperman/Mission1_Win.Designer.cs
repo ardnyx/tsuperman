@@ -65,6 +65,7 @@
             Name = "Mission1_Win";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Congrats!";
+            Load += Mission1_Win_Load;
             ResumeLayout(false);
             PerformLayout();
         }

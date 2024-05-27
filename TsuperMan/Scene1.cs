@@ -69,6 +69,8 @@ namespace TsuperMan
             scene2.Dock = DockStyle.Fill;
             parentPanel.Controls.Add(scene2);
             scene2.BringToFront();
+            Scene1Pnl.Visible = false;
+            this.Hide();
             scene2.Show();
             scene2.StartTextAnimation();
         }

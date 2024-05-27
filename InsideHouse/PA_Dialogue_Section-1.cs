@@ -16,7 +16,7 @@ namespace InsideHouse
         private int msgIndex = 0;
         private string playerMsgText = "Good day Ms. Mayor, Can I speak with you for a moment?";
         private System.Windows.Forms.Timer animationTimer;
-
+        private bool nextFormOpen = false;
         public PA_Dialogue_Section_1()
         {
             InitializeComponent();
@@ -83,9 +83,13 @@ namespace InsideHouse
                 playerMsgText = "That's a good idea!";
             }
             // next form
-            else if (dialogueCounter == 7)
+            else if (dialogueCounter == 7 && !nextFormOpen)
             {
-                // next form
+                nextFormOpen = true;
+                Mission1_Tsuperman.Mission1_LoadingScr mission1 = new Mission1_Tsuperman.Mission1_LoadingScr();
+                mission1.Show();
+                this.Hide();
+                this.Close();
             }
 
             if (msgIndex < playerMsgText.Length)

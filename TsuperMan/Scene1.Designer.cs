@@ -44,8 +44,9 @@
             Scene1Pnl.Controls.Add(label2);
             Scene1Pnl.Controls.Add(label1);
             Scene1Pnl.Location = new Point(0, 0);
+            Scene1Pnl.Margin = new Padding(3, 2, 3, 2);
             Scene1Pnl.Name = "Scene1Pnl";
-            Scene1Pnl.Size = new Size(1531, 770);
+            Scene1Pnl.Size = new Size(1340, 578);
             Scene1Pnl.TabIndex = 0;
             Scene1Pnl.Paint += Scene1Pnl_Paint;
             // 
@@ -54,9 +55,9 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(1209, 741);
+            label2.Location = new Point(1058, 556);
             label2.Name = "label2";
-            label2.Size = new Size(186, 20);
+            label2.Size = new Size(151, 15);
             label2.TabIndex = 2;
             label2.Text = "Click anywhere to continue";
             label2.Click += label2_Click;
@@ -67,9 +68,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(326, 695);
+            label1.Location = new Point(285, 521);
             label1.Name = "label1";
-            label1.Size = new Size(986, 35);
+            label1.Size = new Size(773, 28);
             label1.TabIndex = 1;
             label1.Text = "Manila, my home. A city alive with the sound of jeepneys and the hustle of everyday life.";
             label1.Click += label1_Click_1;
@@ -80,11 +81,12 @@
             // 
             // Scene1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1531, 785);
+            ClientSize = new Size(1340, 589);
             Controls.Add(Scene1Pnl);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Scene1";
             Text = "Scene1";
             Load += Scene1_Load;

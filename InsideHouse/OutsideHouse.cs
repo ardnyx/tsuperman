@@ -80,16 +80,10 @@ namespace InsideHouse
             {
                 dialogueFormOpen = true;
                 PoliticianArea politicianArea = new PoliticianArea();
-                politicianArea.FormClosed += new FormClosedEventHandler(DialogueSection_FormClosed);
                 politicianArea.Show();
                 this.Hide();
+                this.Close();
             }
-        }
-
-        private void DialogueSection_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            dialogueFormOpen = false;
-            this.Show(); // Show the OutsideHouse form again when the PoliticianArea form is closed
         }
     }
 }

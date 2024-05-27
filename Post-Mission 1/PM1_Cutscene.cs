@@ -17,6 +17,7 @@ namespace Post_Mission_1
         private string playerMsgText = "Wow! So much people showed up for today's rally!";
         private System.Windows.Forms.Timer animationTimer;
         private int caseSwitch = 0;
+        private bool nextFormOpen = false;
         public PM1_Cutscene()
         {
             InitializeComponent();
@@ -42,6 +43,14 @@ namespace Post_Mission_1
                 timer1.Enabled = false;
                 this.BackgroundImage = Properties.Resources.savethejeepneys;
                 playerMsgText = "I guess while we're here, we could collect their signatures for the petition!";
+            }
+            else if (dialogueCounter == 2 && !nextFormOpen)
+            {
+                nextFormOpen = true;
+                Post_Mission_2.Form1 form1 = new Post_Mission_2.Form1();
+                form1.Show();
+                this.Hide();
+                this.Close();
             }
 
             if (msgIndex < playerMsgText.Length)
@@ -78,8 +87,21 @@ namespace Post_Mission_1
                 if (!animationTimer.Enabled)
                 {
                     this.MouseClick -= MouseClick_Part1; // Remove the MouseClick_Part1 event handler
+                    this.MouseClick += MouseClick_Part2;
                 }
             });
+        }
+        private void MouseClick_Part2(object sender, MouseEventArgs e)
+        {
+            dialogueCounter++;
+            playerMsg.Text = string.Empty;
+
+            // Start animation for the protagonist's dialogue
+            msgIndex = 0;
+            animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = 100; // Adjust the speed of the text animation
+            animationTimer.Tick += new EventHandler(AnimateText);
+            animationTimer.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
